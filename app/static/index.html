@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Цены на авто</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M1 13l4-5 3 3 6-8%22 stroke=%22%232a78d6%22 stroke-width=%222%22 fill=%22none%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <h1>Аналитика цен на авто</h1>
+  <span class="sub">Drom.ru · Auto.ru</span>
+</header>
+
+<main>
+  <section class="panel filters" aria-label="Параметры">
+    <label>Марка<select id="brand"></select></label>
+    <label>Модель<select id="model" disabled></select></label>
+    <label>Поколение<select id="generation" disabled><option value="">Все</option></select></label>
+    <label>Комплектация<select id="trim" disabled><option value="">Все</option></select></label>
+    <label>С<input type="date" id="from"></label>
+    <label>По<input type="date" id="to"></label>
+    <div class="presets" role="group" aria-label="Быстрый выбор периода">
+      <button data-days="7">7 дн</button><button data-days="30" class="on">30 дн</button>
+      <button data-days="90">3 мес</button><button data-days="365">Год</button>
+    </div>
+    <details class="more">
+      <summary>Дополнительно</summary>
+      <div class="more-body">
+        <label>Год выпуска от<input type="number" id="yearFrom" min="1990" max="2030" placeholder="—"></label>
+        <label>до<input type="number" id="yearTo" min="1990" max="2030" placeholder="—"></label>
+        <fieldset id="sources"><legend>Площадки</legend></fieldset>
+        <label class="check"><input type="checkbox" id="outliers" checked> Убирать выбросы (IQR)</label>
+        <label class="check"><input type="checkbox" id="published" checked> Достраивать историю по дате публикации (оценка)</label>
+      </div>
+    </details>
+    <div class="actions">
+      <button id="run" class="primary">Показать сводку</button>
+    </div>
+  </section>
+
+  <p id="status" class="status" role="status"></p>
+
+  <section id="result" hidden>
+    <div class="kpis">
+      <div class="kpi"><span class="k">Средняя цена</span><b id="kAvg"></b><span id="kMed" class="h"></span></div>
+      <div class="kpi"><span class="k">Минимум за период</span><b id="kMin"></b><span id="kMinNote" class="h"></span></div>
+      <div class="kpi"><span class="k">Пик за период</span><b id="kMax"></b><span id="kMaxNote" class="h"></span></div>
+      <div class="kpi"><span class="k">Изменение медианы</span><b id="kChg"></b><span id="kChgNote" class="h"></span></div>
+      <div class="kpi"><span class="k">Объявлений</span><b id="kCnt"></b><span id="kCntNote" class="h"></span></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Динамика цены</h2>
+        <div class="tools">
+          <button id="toggleTable" class="ghost">Таблица</button>
+          <a id="csv" class="ghost btn" href="#">CSV</a>
+        </div>
+      </div>
+      <p class="hint" id="chartHint"></p>
+      <div class="chart"><canvas id="priceChart" aria-label="График средней и медианной цены"></canvas></div>
+      <div id="seriesTable" class="table-wrap" hidden></div>
+    </div>
+
+    <div class="panel">
+      <h2>Количество объявлений в продаже</h2>
+      <div class="chart small"><canvas id="countChart" aria-label="Количество объявлений по дням"></canvas></div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel"><h2>По площадкам</h2><div id="bySource" class="table-wrap"></div></div>
+      <div class="panel"><h2>По году выпуска</h2><div id="byYear" class="table-wrap"></div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h2>Самые дешёвые сейчас</h2><div id="cheapest" class="table-wrap"></div></div>
+      <div class="panel"><h2>Самые дорогие сейчас</h2><div id="priciest" class="table-wrap"></div></div>
+    </div>
+  </section>
+
+  <section class="panel collect">
+    <div class="panel-head">
+      <h2>Сбор данных</h2>
+      <div class="tools">
+        <label class="check"><input type="checkbox" id="tracked" disabled> Отслеживать модель ежедневно</label>
+        <button id="collectNow" class="ghost" disabled>Собрать сейчас</button>
+      </div>
+    </div>
+    <div id="runs" class="table-wrap"></div>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
