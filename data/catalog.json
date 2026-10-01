@@ -1,0 +1,102 @@
+{
+  "_comment": "Каталог марок/моделей/поколений. drom_path — путь на auto.drom.ru, autoru_mark/autoru_model — коды auto.ru. aliases — названия/коды поколений, которые встречаются на площадках (для сопоставления). Проверьте пути на сайтах и поправьте при необходимости.",
+  "brands": [
+    {"slug": "lada", "name": "Lada (ВАЗ)", "models": [
+      {"slug": "vesta", "name": "Vesta", "drom_path": "lada/vesta", "autoru_mark": "VAZ", "autoru_model": "VESTA", "tracked": true,
+       "generations": [
+         {"name": "I (2015–2022)", "year_from": 2015, "year_to": 2022, "aliases": ["I", "1", "2180"]},
+         {"name": "NG (2022–н.в.)", "year_from": 2023, "year_to": null, "aliases": ["NG", "II", "Vesta NG", "рестайлинг"]}
+       ]},
+      {"slug": "granta", "name": "Granta", "drom_path": "lada/granta", "autoru_mark": "VAZ", "autoru_model": "GRANTA", "tracked": true,
+       "generations": [
+         {"name": "I (2011–2018)", "year_from": 2011, "year_to": 2018, "aliases": ["I", "2190"]},
+         {"name": "I рестайлинг (2018–н.в.)", "year_from": 2019, "year_to": null, "aliases": ["I Рестайлинг", "рестайлинг"]}
+       ]}
+    ]},
+    {"slug": "toyota", "name": "Toyota", "models": [
+      {"slug": "camry", "name": "Camry", "drom_path": "toyota/camry", "autoru_mark": "TOYOTA", "autoru_model": "CAMRY", "tracked": true,
+       "generations": [
+         {"name": "XV50/XV55 (2011–2017)", "year_from": 2011, "year_to": 2017, "aliases": ["XV50", "XV55", "VII"]},
+         {"name": "XV70 (2017–2024)", "year_from": 2018, "year_to": 2023, "aliases": ["XV70", "VIII"]},
+         {"name": "XV80 (2024–н.в.)", "year_from": 2024, "year_to": null, "aliases": ["XV80", "IX"]}
+       ]},
+      {"slug": "rav4", "name": "RAV4", "drom_path": "toyota/rav4", "autoru_mark": "TOYOTA", "autoru_model": "RAV_4", "tracked": false,
+       "generations": [
+         {"name": "XA40 (2013–2019)", "year_from": 2013, "year_to": 2019, "aliases": ["XA40", "IV"]},
+         {"name": "XA50 (2019–н.в.)", "year_from": 2020, "year_to": null, "aliases": ["XA50", "V"]}
+       ]}
+    ]},
+    {"slug": "kia", "name": "Kia", "models": [
+      {"slug": "rio", "name": "Rio", "drom_path": "kia/rio", "autoru_mark": "KIA", "autoru_model": "RIO", "tracked": true,
+       "generations": [
+         {"name": "III (2011–2017)", "year_from": 2011, "year_to": 2017, "aliases": ["III"]},
+         {"name": "IV (2017–2023)", "year_from": 2018, "year_to": 2023, "aliases": ["IV"]}
+       ]},
+      {"slug": "sportage", "name": "Sportage", "drom_path": "kia/sportage", "autoru_mark": "KIA", "autoru_model": "SPORTAGE", "tracked": false,
+       "generations": [
+         {"name": "III (2010–2016)", "year_from": 2010, "year_to": 2015, "aliases": ["III", "SL"]},
+         {"name": "IV (2016–2022)", "year_from": 2016, "year_to": 2021, "aliases": ["IV", "QL"]},
+         {"name": "V (2021–н.в.)", "year_from": 2022, "year_to": null, "aliases": ["V", "NQ5"]}
+       ]}
+    ]},
+    {"slug": "hyundai", "name": "Hyundai", "models": [
+      {"slug": "solaris", "name": "Solaris", "drom_path": "hyundai/solaris", "autoru_mark": "HYUNDAI", "autoru_model": "SOLARIS", "tracked": true,
+       "generations": [
+         {"name": "I (2010–2017)", "year_from": 2010, "year_to": 2016, "aliases": ["I", "RB"]},
+         {"name": "II (2017–2023)", "year_from": 2017, "year_to": 2023, "aliases": ["II", "HC"]}
+       ]},
+      {"slug": "creta", "name": "Creta", "drom_path": "hyundai/creta", "autoru_mark": "HYUNDAI", "autoru_model": "CRETA", "tracked": false,
+       "generations": [
+         {"name": "I (2016–2021)", "year_from": 2016, "year_to": 2021, "aliases": ["I", "GS"]},
+         {"name": "II (2021–н.в.)", "year_from": 2022, "year_to": null, "aliases": ["II", "SU2"]}
+       ]}
+    ]},
+    {"slug": "volkswagen", "name": "Volkswagen", "models": [
+      {"slug": "polo", "name": "Polo", "drom_path": "volkswagen/polo", "autoru_mark": "VOLKSWAGEN", "autoru_model": "POLO", "tracked": false,
+       "generations": [
+         {"name": "V седан (2010–2020)", "year_from": 2010, "year_to": 2020, "aliases": ["V"]},
+         {"name": "VI лифтбек (2020–н.в.)", "year_from": 2021, "year_to": null, "aliases": ["VI"]}
+       ]}
+    ]},
+    {"slug": "skoda", "name": "Skoda", "models": [
+      {"slug": "octavia", "name": "Octavia", "drom_path": "skoda/octavia", "autoru_mark": "SKODA", "autoru_model": "OCTAVIA", "tracked": false,
+       "generations": [
+         {"name": "A7 (2013–2020)", "year_from": 2013, "year_to": 2019, "aliases": ["A7", "III"]},
+         {"name": "A8 (2019–н.в.)", "year_from": 2020, "year_to": null, "aliases": ["A8", "IV"]}
+       ]}
+    ]},
+    {"slug": "haval", "name": "Haval", "models": [
+      {"slug": "jolion", "name": "Jolion", "drom_path": "haval/jolion", "autoru_mark": "HAVAL", "autoru_model": "JOLION", "tracked": true,
+       "generations": [
+         {"name": "I (2021–н.в.)", "year_from": 2021, "year_to": null, "aliases": ["I"]}
+       ]}
+    ]},
+    {"slug": "chery", "name": "Chery", "models": [
+      {"slug": "tiggo-7-pro", "name": "Tiggo 7 Pro", "drom_path": "chery/tiggo_7_pro", "autoru_mark": "CHERY", "autoru_model": "TIGGO_7_PRO", "tracked": false,
+       "generations": [
+         {"name": "I (2020–н.в.)", "year_from": 2020, "year_to": null, "aliases": ["I"]}
+       ]}
+    ]},
+    {"slug": "geely", "name": "Geely", "models": [
+      {"slug": "coolray", "name": "Coolray", "drom_path": "geely/coolray", "autoru_mark": "GEELY", "autoru_model": "COOLRAY", "tracked": false,
+       "generations": [
+         {"name": "I (2020–н.в.)", "year_from": 2020, "year_to": null, "aliases": ["I", "SX11"]}
+       ]}
+    ]},
+    {"slug": "bmw", "name": "BMW", "models": [
+      {"slug": "x5", "name": "X5", "drom_path": "bmw/x5", "autoru_mark": "BMW", "autoru_model": "X5", "tracked": false,
+       "generations": [
+         {"name": "F15 (2013–2018)", "year_from": 2013, "year_to": 2018, "aliases": ["F15", "III"]},
+         {"name": "G05 (2018–н.в.)", "year_from": 2019, "year_to": null, "aliases": ["G05", "IV"]}
+       ]}
+    ]},
+    {"slug": "mercedes-benz", "name": "Mercedes-Benz", "models": [
+      {"slug": "e-class", "name": "E-класс", "drom_path": "mercedes-benz/e-class", "autoru_mark": "MERCEDES", "autoru_model": "E_KLASSE", "tracked": false,
+       "generations": [
+         {"name": "W212 (2009–2016)", "year_from": 2009, "year_to": 2016, "aliases": ["W212", "IV"]},
+         {"name": "W213 (2016–2023)", "year_from": 2017, "year_to": 2023, "aliases": ["W213", "V"]},
+         {"name": "W214 (2023–н.в.)", "year_from": 2024, "year_to": null, "aliases": ["W214", "VI"]}
+       ]}
+    ]}
+  ]
+}

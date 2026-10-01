@@ -1,0 +1,28 @@
+{
+  "offers": [
+    {"id": "1124567890", "hash": "ab12cd34", "section": "used",
+     "price_info": {"RUR": 2950000, "USD": 32000},
+     "documents": {"year": 2020},
+     "state": {"mileage": 61000},
+     "additional_info": {"creation_date": "1757635200000"},
+     "seller": {"location": {"region_info": {"name": "Москва"}}},
+     "vehicle_info": {
+       "mark_info": {"code": "TOYOTA", "name": "Toyota"},
+       "model_info": {"code": "CAMRY", "name": "Camry"},
+       "super_gen": {"id": "21390000", "name": "XV70"},
+       "complectation": {"name": "Престиж Safety"},
+       "tech_param": {"displacement": 2487, "power": 200, "engine_type": "GASOLINE",
+                      "transmission": "AUTOMATIC", "gear_type": "FORWARD_CONTROL"}}},
+    {"id": "1124567891", "hash": "ff00ee11", "section": "used",
+     "price_info": {"RUR": 1500000},
+     "documents": {"year": 2016},
+     "state": {"mileage": 150000},
+     "vehicle_info": {
+       "mark_info": {"code": "TOYOTA"}, "model_info": {"code": "CAMRY"},
+       "super_gen": {"name": "XV50 рестайлинг"},
+       "tech_param": {"displacement": 1998, "power": 150, "engine_type": "GASOLINE",
+                      "transmission": "AUTOMATIC", "gear_type": "FORWARD_CONTROL"}}},
+    {"id": "1124567892", "hash": "00000000", "price_info": {}}
+  ],
+  "pagination": {"page": 1, "total_page_count": 3}
+}
